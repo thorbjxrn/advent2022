@@ -5,7 +5,7 @@ import Foundation
 // Day 1
 
 let output1 = day1(
-    maxCaloriesCarriedByElf: try String(
+    inputString: try String(
         contentsOfFile:  Bundle.main.path(forResource: "input/day1", ofType: "txt")!,
         encoding: String.Encoding.utf8
     )
