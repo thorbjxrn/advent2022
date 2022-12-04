@@ -23,3 +23,14 @@ let output2 = day2(
 )
 
 print(output2)
+
+// Day 3
+
+let output3 = day3(
+    inputString: try String(
+        contentsOfFile:  Bundle.main.path(forResource: "input/day3", ofType: "txt")!,
+        encoding: String.Encoding.utf8
+    )
+)
+
+print(output3)
