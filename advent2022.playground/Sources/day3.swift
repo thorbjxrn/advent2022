@@ -11,7 +11,6 @@ private func parseInput(inputString: String) -> [Int] {
     let lookupValues = Array("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ").enumerated()
     let characters: [Character] = getTriplets(from: inputString)
     return characters.compactMap({ char in
-        // print(char)
         for (n, x) in lookupValues {
             if (char == x) {
                 return n + 1
@@ -46,7 +45,7 @@ private func compareThreeStrings(strings: [String]) -> Character {
             if char1 == char2{
                 for char3 in Array(strings[2]) {
                     if char2 == char3 {
-                        print("\(strings) > \(char3)")
+                        // print("\(strings) > \(char3)")
                         return char3
                     }
                 }
