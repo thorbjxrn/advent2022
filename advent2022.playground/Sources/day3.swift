@@ -7,7 +7,23 @@ public func day3(inputString: String) -> Int {
 
 private func parseInput(inputString: String) -> [Int] {
     let lookupValues = Array("abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ").enumerated()
-    let characters: [Character] = inputString.components(separatedBy: "\n").compactMap { string in
+    let characters: [Character] = getDuplicates(from: inputString)
+    return characters.compactMap({ char in
+        for (n, x) in lookupValues {
+            if (char == x) {
+                return n + 1
+            }
+        }
+        fatalError()
+    })
+}
+
+private func getTriplets(from string: String) -> Character {
+    return "f"
+}
+
+private func getDuplicates(from inputString: String) -> [Character] {
+    let chars: [Character] = inputString.components(separatedBy: "\n").compactMap { string in
         guard !string.isEmpty else {
             return nil
         }
@@ -33,12 +49,5 @@ private func parseInput(inputString: String) -> [Int] {
         }()
         return subject
     }
-    return characters.compactMap({ char in
-        for (n, x) in lookupValues {
-            if (char == x) {
-                return n + 1
-            }
-        }
-        fatalError()
-    })
+    return chars
 }
