@@ -45,3 +45,25 @@ let output4 = day4(
 )
 
 print("day4: \(output4)")
+
+// Day 5
+
+let output5 = day5(
+    inputString: try String(
+        contentsOfFile:  Bundle.main.path(forResource: "input/day5", ofType: "txt")!,
+        encoding: String.Encoding.utf8
+    )
+)
+
+print("day5: \(output5)")
+
+// Day 6
+
+let output6 = day6(
+    inputString: try String(
+        contentsOfFile:  Bundle.main.path(forResource: "input/day6", ofType: "txt")!,
+        encoding: String.Encoding.utf8
+    )
+)
+
+print("day6: \(output6)")
